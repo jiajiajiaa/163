@@ -1,11 +1,11 @@
 <template>
   <section v-if="homeData.categoryModule">
     <div class="classify-container" v-for="(classify, index) in homeData.categoryModule" :key="index">
-      <img :src="classify.titlePicUrl" alt="标题图片">
+      <img v-lazy="classify.titlePicUrl" alt="标题图片">
       <div class="classify-list">
         <ul class="ul-node">
           <li v-for="(item ,index) in classify.itemList" :key="index">
-            <img :src="item.listPicUrl" alt="商品图片">
+            <img v-lazy="item.listPicUrl" alt="商品图片">
             <div class="good-info">
               <span class="good-name">{{item.name}}</span>
               <span class="good-price">￥{{item.retailPrice}}</span>

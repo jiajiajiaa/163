@@ -17,7 +17,7 @@
     </div>
     <ul class="time-list" v-if="flashSale.flashSaleModule">
       <li v-for="(item, index) in flashSale.flashSaleModule.itemList" :key="index">
-        <img :src="item.picUrl" alt="限时购">
+        <img v-lazy="item.picUrl" alt="限时购">
         <div class="good-price">
           <span class="new-price">￥{{item.activityPrice}}</span>
           <span class="old-price">￥{{item.originPrice}}</span>

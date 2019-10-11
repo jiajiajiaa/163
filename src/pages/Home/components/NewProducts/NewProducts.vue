@@ -10,7 +10,7 @@
     </div>
     <ul class="products-list" v-if="homeData.newItemList">
       <li v-for="(item, index) in homeData.newItemList" :key="index">
-        <img :src="item.listPicUrl" alt="新品首发">
+        <img v-lazy="item.listPicUrl" alt="新品首发">
         <div class="good-name">
           <span>{{item.name}}</span>
           <span class="good-price">￥{{item.counterPrice}}</span>

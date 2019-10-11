@@ -2,7 +2,7 @@
   <section class="nav-container" >
     <ul class="nav-box" v-if="navList.kingKongModule">
       <li class="nav-item" v-for="(nav, index) in navList.kingKongModule.kingKongList" :key="index">
-        <img :src="nav.picUrl" alt="导航列表">
+        <img v-lazy="nav.picUrl" alt="导航列表">
         <span>{{nav.text}}</span>
       </li>
     </ul>

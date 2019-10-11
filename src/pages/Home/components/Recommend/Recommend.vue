@@ -9,7 +9,7 @@
     </div>
     <div class="reco-list" v-if="homeData.popularItemList">
       <div class="reco-list-top">
-        <img :src="homeData.popularItemList[0].listPicUrl" alt="好物推荐">
+        <img v-lazy="homeData.popularItemList[0].listPicUrl" alt="好物推荐">
         <div class="good-info">
           <span v-if="isShow">APP特惠</span>
           <p class="ellipsis">{{homeData.popularItemList[0].name}}</p>
@@ -19,7 +19,7 @@
       </div>
       <ul class="reco-list-bottom">
         <li v-for="(item, index) in getPopularItem" :key="index">
-          <img :src="item.listPicUrl" alt="商品图">
+          <img v-lazy="item.listPicUrl" alt="商品图">
           <div class="good-name">
             <span>{{item.name}}</span>
             <span class="good-price">￥{{item.counterPrice}}</span>
