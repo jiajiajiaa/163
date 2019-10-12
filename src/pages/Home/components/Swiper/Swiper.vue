@@ -2,7 +2,7 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(i,index) in imageArr" :key="index">
-        <img v-lazy="i" alt="img"/>
+        <img v-lazy="i"/>
       </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -22,31 +22,32 @@
             'https://yanxuan.nosdn.127.net/791dda3ae432212164b1668b25fbd11c.jpg?imageView&quality=75&thumbnail=750x0',
             'https://yanxuan.nosdn.127.net/5afff79cb85dfcd465e6da0d8404ddae.jpg?imageView&quality=75&thumbnail=750x0'
           ],
-        
       }
     },
     mounted(){
-      new Swiper('.swiper-container',{
-        autoplay: true,    //可选选项，自动滑动
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'custom',
-          clickable: true,
-          // 自定义分页器
-          renderCustom: function (swiper, current, total) {
-            var customPaginationHtml = "";
-            for (var i = 0; i < total; i++) {
-              //判断哪个分页器此刻应该被激活
-              if (i === (current - 1)) {
-                customPaginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-              } else {
-                customPaginationHtml += '<span class="swiper-pagination-customs"></span>';
+      this.$nextTick(()=>{
+        new Swiper('.swiper-container',{
+          autoplay: true,    //可选选项，自动滑动
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'custom',
+            clickable: true,
+            // 自定义分页器
+            renderCustom: function (swiper, current, total) {
+              var customPaginationHtml = "";
+              for (var i = 0; i < total; i++) {
+                //判断哪个分页器此刻应该被激活
+                if (i === (current - 1)) {
+                  customPaginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+                } else {
+                  customPaginationHtml += '<span class="swiper-pagination-customs"></span>';
+                }
               }
+              return customPaginationHtml;
             }
-            return customPaginationHtml;
-          }
-        },
+          },
+        })
       })
     }
   }

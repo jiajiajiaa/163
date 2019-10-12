@@ -7,6 +7,7 @@ import getters from './getters'
 import home from './modules/home'
 import categoryList from './modules/categoryList'
 import things from './modules/things'
+import search from './modules/search'
 
 Vue.use(Vuex)
 export default new Vuex.Store({
@@ -16,6 +17,7 @@ export default new Vuex.Store({
   modules: {
     home,
     categoryList,
-    things
+    things,
+    search
   }
 })

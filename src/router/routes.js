@@ -1,17 +1,17 @@
-import Home from '../pages/Home/Home.vue'
+const Home = () => import('../pages/Home/Home.vue')
 
-import Category from '../pages/Category/Category.vue'
-import Categorylist from '../pages/Category/Categorylist/Categorylist.vue'
+const Category = () => import('../pages/Category/Category.vue')
+const Categorylist = () => import('../pages/Category/Categorylist/Categorylist.vue')
 
-import Things from '../pages/Things/Things.vue'
-import Find from '../pages/Things/Find/Find.vue'
-import Firstview from '../pages/Things/Find/Firstview/Firstview.vue'
-import Expert from '../pages/Things/Expert/Expert.vue'
+const Things = () => import('../pages/Things/Things.vue')
+const Find = () => import('../pages/Things/Find/Find.vue')
+const Firstview = () => import('../pages/Things/Find/Firstview/Firstview.vue')
+const Expert = () => import('../pages/Personal/Login/Login.vue')
 
-import Shopcar from '../pages/Shopcar/Shopcar.vue'
-import Personal from '../pages/Personal/Personal.vue'
-import Search from '../pages/Search/Search.vue'
-import Login from '../pages/Personal/Login/Login.vue'
+const Shopcar = () => import('../pages/Shopcar/Shopcar.vue')
+const Personal = () => import('../pages/Personal/Personal.vue')
+const Search = () => import('../pages/Search/Search.vue')
+const Login = () => import('../pages/Personal/Login/Login.vue')
 
 export default [
   {

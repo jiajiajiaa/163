@@ -50,11 +50,17 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .contannier
+    height 100%
+    position relative
     margin-top 78px
     overflow hidden
     border-top 2px solid #eee
     .navscroll
+      z-index 999
+      background #fff
       display flex
+      width 100%
+      position fixed
       border-bottom 2px solid #eee
       .navTop
         display flex

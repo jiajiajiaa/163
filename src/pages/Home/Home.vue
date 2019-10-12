@@ -9,7 +9,7 @@
           搜索商品，共23333件好物
         </span>
       </div>
-      <span slot="right" class="login_btn" @click="$router.push('/personal/emaillogin')">
+      <span slot="right" class="login_btn" @click="$router.push('/personal/login')">
         登录
       </span>
     </Header>
@@ -102,6 +102,7 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .home
+    position relative
     width 100%
     height 100%
     .header
@@ -144,6 +145,7 @@
     .wrapper
       width 100%
       height 100%
+      margin-top 144px
       .content
         padding-bottom 100px
         background #f4f4f4  

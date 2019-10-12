@@ -1,5 +1,5 @@
 <template>
-  <div :style="{background:'#f4f4f4'}">
+  <div :style="{background:'#f4f4f4'}" class="wrap">
     <Header>
       <div slot="left" class="tohome" @click="$router.push('/home')">
         <span class="iconfont icon-shouye"></span>
@@ -36,32 +36,35 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  .tohome
-    width 33%
-    margin-top 10px
-    background #fff
-    span
-      font-size 46px
-  .mian-header
-    width 33%
-    margin-top 10px
-    font-size 34px
-    color #777
-    background #fff
-    span
-      margin-right 20px
-      &.active
-        color #b4282d
-        font-size 42px
-        font-weight 700
-  .right
-    margin-top 10px
-    width 33%
-    background #fff
-    display flex
-    justify-content flex-end
-    span
-      font-size 46px
-      margin-right 20px
-      color #000
+  .wrap
+    height 100%
+    Header
+      .tohome
+        width 33%
+        margin-top 10px
+        background #fff
+        span
+          font-size 46px
+      .mian-header
+        width 33%
+        margin-top 10px
+        font-size 34px
+        color #777
+        background #fff
+        span
+          margin-right 20px
+          &.active
+            color #b4282d
+            font-size 42px
+            font-weight 700
+      .right
+        margin-top 10px
+        width 33%
+        background #fff
+        display flex
+        justify-content flex-end
+        span
+          font-size 46px
+          margin-right 20px
+          color #000
 </style>

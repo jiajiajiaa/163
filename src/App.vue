@@ -15,6 +15,7 @@ export default {
     await this.$store.dispatch('getCategorylist')
     await this.$store.dispatch('getNavData')
     await this.$store.dispatch('getRecommendData')
+    await this.$store.dispatch('getHotSearch')
   },
   components:{
     Footer

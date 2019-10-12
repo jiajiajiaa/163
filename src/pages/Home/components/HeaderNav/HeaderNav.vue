@@ -78,11 +78,12 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "../../../../common/stylus/mixins.styl"
   .header_nav
+    position fixed
+    left 0
+    top 70px
     width 100%
     height: 75px;
-    position relative
     z-index 2
-    margin-top 75px
     background #fff
     .left_ul_box
       width 100%
