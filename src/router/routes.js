@@ -6,7 +6,7 @@ const Categorylist = () => import('../pages/Category/Categorylist/Categorylist.v
 const Things = () => import('../pages/Things/Things.vue')
 const Find = () => import('../pages/Things/Find/Find.vue')
 const Firstview = () => import('../pages/Things/Find/Firstview/Firstview.vue')
-const Expert = () => import('../pages/Personal/Login/Login.vue')
+const Expert = () => import('../pages/Things/Expert/Expert.vue')
 
 const Shopcar = () => import('../pages/Shopcar/Shopcar.vue')
 const Personal = () => import('../pages/Personal/Personal.vue')
